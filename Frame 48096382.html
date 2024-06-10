@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Event Details</title>
+</head>
+<body>
+    <div class="container">
+        <div class="fr1">
+            <i class="fa-regular fa-circle-check" id="complete-btn" style="color: #F28482;"></i>
+            <div class="fr11">
+                <i class="fa-solid fa-trash-can fa-xs" style="color: #F28482;"></i>
+                <i class="fa-solid fa-xmark" style="color: #F28482;"></i>
+            </div>
+        </div>
+        <div class="fr2">
+            <h2 class="fr2-1" id="event-title" contenteditable="true">Flower Arrangement</h2>
+            <p class="fr2-1" id="event-date">
+              <i class="fa-regular fa-calendar" id="calender-icon" style="color: #CECECE;"></i> Dec 5, 2024 at 8:00-10:00 AM
+            </p>
+            
+        </div>
+        <div class="fr3">
+            <p class="user"><i class="fa-regular fa-user" style="color: #F28482;"></i></p>
+            <p class="assign" style="color:#5A5A5A;">Assign to:</p>
+            <div class="jane">
+                <img class="janeimg" src="/figuser.png" alt="">
+                <span class="janename" id="assignee-name">Jane Smith</span>
+                <div class="custom-dropdown">
+                    <select id="assignee-dropdown">
+                        <option value="Jane Smith" selected>Jane Smith</option>
+                        <option value="John Doe">John Doe</option>
+                        <option value="Alice Johnson">Alice Johnson</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="note-container">
+            <div class="note-icon"><i class="fa-regular fa-note-sticky" style="color: #F28482;"></i></div>
+            <div class="note-text" style="font-family: Arial, sans-serif;">Note:</div>
+            <textarea class="note-input" id="note" rows="2" placeholder="09382049832&#10;www.flowervendor.com"></textarea>
+        </div>
+        <!-- <div class="comment-section"> -->
+          <h3>Comments</h3>
+          <div class="comment-box">
+              <div class="comment" id="comment1">
+                  <img class="janeimg" src="/figuser.png" alt="User Avatar">
+                  <div class="comment-content">
+                      <div class="comment-header">
+                          <span>Jane Smith</span>
+                          <div class="comment-actions">
+                              <button onclick="editComment('comment1')">✎</button>
+                              <button onclick="deleteComment('comment1')" style="color:#F28482;" ><i class="fa-regular fa-trash-can" ></i></button>
+                          </div>
+                      </div>
+                      <p>Thanks for assigning me on the task. We'll get the details ironed out.</p>
+                  </div>
+              </div>
+          </div>
+          <div class="add-comment">
+              <img class="janeimg" src="/figuser.png" alt="User Avatar">
+              <input type="text" id="newComment" placeholder="Write comment...">
+              <button onclick="addComment()">➤</button>
+          </div>
+      </div>
+      </div>
+       <!-- Popup -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close-btn">&times;</span>
+            <p>Thanks for submitting!</p>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="script.js"></script>
+    
+</body>
+</html>
